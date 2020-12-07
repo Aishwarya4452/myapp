@@ -1,0 +1,18 @@
+<div [ngClass]="{'myclass':flag}">
+<h1>In PTAB component</h1>
+Name:{{name}}
+Salary:{{sal}}
+flag:{{flag}}
+<div *ngIf=flag>
+<input type="text" name="nm" [(ngModel)]=name/>
+</div>
+<button type="button" name="btn" (click)="changeflag()">click me</button>
+</div>
+<div [ngClass]="{'newclass':flag1,'newclass1':!flag1}">
+    <table>
+        <tr><th>Id</th><th>Name</th><th>salary</th></tr>
+        <tr *ngFor="let p of parr"><td>{{p.id}}</td><td>{{p.name}}</td><td>{{p.sal}}</td></tr>
+    </table>
+</div>
+<pform></pform>
+<plist></plist>
